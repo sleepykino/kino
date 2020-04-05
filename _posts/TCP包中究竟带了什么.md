@@ -9,7 +9,6 @@ title: TCP包中究竟带了什么
 **文中有大量的仅做一点改动的抄写内容，若有侵权，请联系我删改。文章所有引用与资料在末尾**
 <font color=#0099ff size=5 face="微软雅黑">**全篇几乎无图预警**</font>
 
-@[toc](目录)
 <font color=#a98175 size=2 face="微软雅黑">您也可以先看后记_(:з」∠)_</font>
 # 一、TCP首部
 ![TCP首部](https://img-blog.csdnimg.cn/20191019164015738.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4NTQ3NzQ0,size_16,color_FFFFFF,t_70)
