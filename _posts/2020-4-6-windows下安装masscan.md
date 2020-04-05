@@ -1,4 +1,11 @@
-﻿# 0x00 masscan简介
+---
+layout: post
+title: TCP包中究竟带了什么
+---
+
+masscan在windows下的安装
+
+# 0x00 masscan简介
 masscan是一款快速扫描器，可以6分钟扫完全部互联网
 &nbsp;&nbsp;&nbsp;&nbsp;*github地址：*
 &nbsp;&nbsp;&nbsp;&nbsp;[https://github.com/robertdavidgraham/masscan](https://github.com/robertdavidgraham/masscan)
