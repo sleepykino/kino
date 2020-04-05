@@ -4,11 +4,11 @@ title: About
 permalink: /about/
 ---
 
-个人学习记录网站
+放些个人学习记录
 
-### More Information
+### 其它信息
 
-只是有搞笑元素的故事
+这个人很懒 什么也没写...
 
 ### Contact me
 
