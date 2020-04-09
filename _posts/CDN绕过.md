@@ -1,0 +1,30 @@
+﻿# CDN绕过  
+## 检测目标是否存在CDN  
+- 超级ping   
+使用各地的IP进行ping  
+<http://ping.chinaz.com/>   
+<http://ping.aizhan.com/>  
+<https://www.17ce.com/>
+- nslookup  
+nslookup xx.com 看返回IP数量  
+
+## 绕过CDN获取真实IP方法  
+1. 子域名查询  
+可能只有主域名或访问量大的做了CDN，子域名没做，这些子域名的地址可能和本体服务器在一起，通过子域名的地址推测出真实的地址  
+2. 国外地址请求  
+可能只做了国内的CDN，通过国外IP来找到真实的地址
+3. 邮件服务查询  
+注册等时候可能会接受网站发给我们的邮件，这个邮件是不会有CDN的，通过这个邮件来发现目标的真实地址 (查看信头)
+4. 其它方法：  
++ 遗留文件：(看运气)比如phpinfo.php->server_addr  
++ 扫全网：(成本高)使用全球各地的IP都进行扫描，一般都能发现部分没CDN的地区  
++ shodan：(不够准)查看收录信息  (钟馗之眼和FOFA同理)
++ dns历史记录:(看时机) <https://dnsdb.io/zh-cn/> <http://viewdns.info/>  利用SecurityTrails平台<https://securitytrails.com/> 
++ SSL证书获取：当你在端口443上直接连接到IP时，SSL证书就会被暴露。如果攻击者扫描0.0.0.0/0，即整个互联网，他们就可以在端口443上获取在 xxx.com上的有效证书，进而获取提供给你的Web服务器IP。可以使用<https://censys.io/>查询  参数parsed.names: xxx.com and tags.raw: trusted (查询有效证书)
+  
+## 小技巧  
+- 直接测 xxx.com，可能CDN开启的是 www.xxx.com,但网站设置是*.xxx.com 把前面的去掉再ping就是真实的
+  
+## 脚本工具  
+(优先上面的方法)  
+[w8fuckcdn](https://github.com/boy-hack/w8fuckcdn)
